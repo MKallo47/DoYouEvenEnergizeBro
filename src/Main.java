@@ -22,12 +22,15 @@ public class Main {
             double exerciseJoules = weightInKilos * distanceInMeters * velocity * reps;
             System.out.println("For Exercise " + i + " you generated " + exerciseJoules + " joules");
             totalJoules += exerciseJoules;
+            System.out.println(" ");
         }
 
         double wattSeconds = totalJoules;
         double wattHour = wattSeconds / 3600;
         double kiloWattHour = wattHour / 1000;
+        double calories = totalJoules / 4184;
         System.out.println("In total you generated " + totalJoules + " joules or " + wattHour + " watt-hours or " + kiloWattHour + "kwh");
+        System.out.println("You also burned " + calories + " calories.");
         if (kiloWattHour >= 65) {
             System.out.println("With that energy you could power your house for a day in the summer!");
         } else if (kiloWattHour < 65 && kiloWattHour >=50) {
