@@ -14,9 +14,7 @@ public class Main {
             System.out.println("What distance will the weight travel each rep during your exercise?");
             double distance = scanner.nextDouble();
             double distanceInMeters = distance * 0.3048;
-            System.out.println("How many seconds does it take for you to complete 1 rep of this exercise?");
-            double time = scanner.nextDouble();
-            double velocity = distanceInMeters / time;
+            double velocity = 9.8;
             System.out.println("How many reps did you complete in this exercise?");
             int reps = scanner.nextInt();
             double exerciseJoules = weightInKilos * distanceInMeters * velocity * reps;
